@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de tareas</title>
+</head>
+<body>
+
+  <h1>Mis tareas</h1>
+
+  <ul id="listaTareas">
+    <li>
+      Estudiar HTML
+      <button onclick="eliminar(this)">Eliminar</button>
+    </li>
+    <li>
+      Practicar JavaScript
+      <button onclick="eliminar(this)">Eliminar</button>
+    </li>
+    <li>
+      Leer un libro
+      <button onclick="eliminar(this)">Eliminar</button>
+    </li>
+  </ul>
+
+  <script>
+    function eliminar(boton) {
+      boton.parentElement.remove();
+    }
+  </script>
+
+</body>
+</html>
