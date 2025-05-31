@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Agregar Tarea</title>
+</head>
+<body>
+  <h1>Agregar Tarea</h1>
+
+  <form id="task-form">
+    <input type="text" id="task-input" placeholder="Escribe una tarea">
+    <button type="submit">Agregar</button>
+  </form>
+
+  <ul id="task-list"></ul>
+
+  <script>
+    const form = document.getElementById('task-form');
+    const list = document.getElementById('task-list');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const input = document.getElementById('task-input');
+      if (input.value.trim() !== '') {
+        const li = document.createElement('li');
+        li.textContent = input.value;
+        list.appendChild(li);
+        input.value = '';
+      }
+    });
+  </script>
+</body>
+</html>
