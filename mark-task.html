@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Tareas</title>
+  <style>
+    .completada {
+      text-decoration: line-through;
+      color: gray;
+    }
+  </style>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h2>Mis Tareas</h2>
+  <ul>
+    <li id="tarea1">
+      Comprar pan 
+      <button onclick="marcarComoCompletada('tarea1')">✔️</button>
+    </li>
+    <li id="tarea2">
+      Estudiar JavaScript 
+      <button onclick="marcarComoCompletada('tarea2')">✔️</button>
+    </li>
+  </ul>
+</body>
+<scirpt>
+function marcarComoCompletada(idTarea) {
+  const tarea = document.getElementById(idTarea);
+
+  if (tarea) {
+    tarea.classList.toggle("completada");
+  }
+}
+
+</script>
+</html>
